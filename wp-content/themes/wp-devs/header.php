@@ -3,6 +3,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <?php wp_head();?>
 </head>
 <body <?php body_class();?> >
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit porro vitae ipsum, odit vel cumque nam minus dolores quas culpa esse quisquam totam mollitia? Eaque culpa nobis soluta corporis aut.</p>
