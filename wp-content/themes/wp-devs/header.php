@@ -6,21 +6,31 @@
     <?php wp_head();?>
 </head>
 <body <?php body_class();?> >
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit porro vitae ipsum, odit vel cumque nam minus dolores quas culpa esse quisquam totam mollitia? Eaque culpa nobis soluta corporis aut.</p>
-    
     <div id="page" class="site">
         <header>
             <section class="top-bar">
-                <div class="logo">
-                    Logo
-                </div>
-                <div class="searchbox">
-                    Searchbox
+                <div class="container">
+                    <div class="logo">
+                        Logo
+                    </div>
+                    <div class="searchbox">
+                        Searchbox
+                    </div>
                 </div>
             </section>
+
             <section class="menu-area">
-                <nav class="main-menu">
-                    Menu
-                </nav>
+                <div class="container">
+                    <nav class="main-menu">
+                        <button class="check-button">
+                            <div class="menu-icon">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                        </button>
+                        <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2) );?>
+                    </nav>
+                </div>
             </section>
         </header>
