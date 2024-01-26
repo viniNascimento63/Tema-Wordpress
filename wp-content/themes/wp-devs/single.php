@@ -17,6 +17,12 @@
                         <div class="content"><?php the_content();?></div>
                     </article>
                     <?php
+                    // Verifica se o post atual está aberto para comentários
+                    // E/OU a quantidade de comentários do post
+                    if ( comments_open() || get_comments_number() ) {
+                        // Carrega a template para comentários
+                        comments_template();
+                    }
                 endwhile;?>
             </div>
         </div>
