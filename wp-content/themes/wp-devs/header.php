@@ -22,7 +22,8 @@
                         ?>
                     </div>
                     <div class="searchbox">
-                        Searchbox
+                        <!-- Exibe uma caixa de pesquisa -->
+                        <?php get_search_form(); ?>
                     </div>
                 </div>
             </section>
