@@ -19,7 +19,7 @@
                                                 <p>Posted in <?php echo get_the_date();?> by <?php echo the_author_posts_link();?>.</p>
                                                 <p>Categories: <?php the_category( ' ' );?></p>
                                                 <p>Tags: <?php the_tags( ' ', ', ' );?></p>
-                                                <?php the_content();?>
+                                                <?php the_excerpt();?>
                                             </div>
                                         </article>
                                     <?php
