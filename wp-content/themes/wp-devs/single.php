@@ -14,7 +14,13 @@
                                 <p>Tags: <?php the_tags( ' ', ', ' );?></p>
                             </div>
                         </header>
-                        <div class="content"><?php the_content();?></div>
+                        <div class="content">
+                            <?php the_content();?>
+                            <?php 
+                                // Mostra links de páginas para posts paginados
+                                wp_link_pages();
+                            ?>
+                        </div>                        
                     </article>
 
                     <!-- Links de navegação dentro dos posts -->
