@@ -16,6 +16,17 @@
                         </header>
                         <div class="content"><?php the_content();?></div>
                     </article>
+
+                    <!-- Links de navegação dentro dos posts -->
+                    <div class="wpdevs-pagination">
+                        <div class="pages next">
+                            <?php next_post_link( "Older posts >>" ); ?>
+                        </div>
+                        <div class="pages previous">
+                            <?php previous_post_link( "<< Newer posts" ); ?>
+                        </div>
+                    </div>
+
                     <?php
                     // Verifica se o post atual está aberto para comentários
                     // E/OU a quantidade de comentários do post

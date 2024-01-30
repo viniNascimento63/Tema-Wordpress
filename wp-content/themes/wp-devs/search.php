@@ -31,6 +31,10 @@
                 </article>
                 <?php
             endwhile;
+            /* Exibe navegação por paginação de próximo/anterior
+             * para um conjunto de posts, quando aplicável.
+            */
+            the_posts_pagination();
             ?>
 
         </div>
