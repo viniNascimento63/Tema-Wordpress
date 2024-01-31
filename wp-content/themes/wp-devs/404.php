@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="error-404">
                     <header>
-                        <h1>Page not found</h1>
+                        <h1>Page not found 😢</h1>
                         <p>Unfortunately, the page you tried to reach does not exists on this site.</p>
                     </header>
 

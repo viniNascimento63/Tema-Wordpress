@@ -9,25 +9,15 @@
                         <div class="page-item">
                             <?php 
                                 while( have_posts() ) : the_post();
-                                ?>
-                                    <article>
-                                        <header>
-                                            <h1><?php the_title(); ?></h1>
-                                        </header>
-                                        <?php the_content(); ?>
-                                        <?php 
-                                            // Mostra links de páginas para posts paginados
-                                            wp_link_pages();
-                                        ?>
-                                    </article>
-                                <?php
+                                
+                                    get_template_part('parts/content', 'page');
 
-                                // Verifica se o post atual está aberto para comentários
-                                // E/OU a quantidade de comentários do post
-                                if ( comments_open() || get_comments_number() ) {
-                                    // Carrega a template para comentários
-                                    comments_template();
-                                }
+                                    // Verifica se o post atual está aberto para comentários
+                                    // E/OU a quantidade de comentários do post
+                                    if ( comments_open() || get_comments_number() ) {
+                                        // Carrega a template para comentários
+                                        comments_template();
+                                    }
                                 endwhile;
                             ?>                                
                         </div>

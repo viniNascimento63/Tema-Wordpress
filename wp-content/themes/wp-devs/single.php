@@ -4,25 +4,10 @@
             <div class="container">
                 <?php
                 while(have_posts()) : the_post();
-                    ?>
-                    <article id="post-<?php the_ID();?>" <?php post_class();?> >
-                        <header>
-                            <h1><?php the_title();?></h1>
-                            <div class="meta-info">
-                                <p>Posted in <?php echo get_the_date();?> by <?php echo the_author_posts_link();?>.</p>
-                                <p>Categories: <?php the_category( ' ' );?></p>
-                                <p>Tags: <?php the_tags( ' ', ', ' );?></p>
-                            </div>
-                        </header>
-                        <div class="content">
-                            <?php the_content();?>
-                            <?php 
-                                // Mostra links de páginas para posts paginados
-                                wp_link_pages();
-                            ?>
-                        </div>                        
-                    </article>
 
+                    get_template_part('parts/content', 'single');
+                    ?>
+                    
                     <!-- Links de navegação dentro dos posts -->
                     <div class="wpdevs-pagination">
                         <div class="pages next">
