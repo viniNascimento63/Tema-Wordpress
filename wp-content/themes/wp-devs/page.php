@@ -9,15 +9,11 @@
                         <div class="page-item">
                             <?php 
                                 while( have_posts() ) : the_post();
-                                
-                                    get_template_part('parts/content', 'page');
+                                get_template_part( 'parts/content', 'page' );
 
-                                    // Verifica se o post atual está aberto para comentários
-                                    // E/OU a quantidade de comentários do post
-                                    if ( comments_open() || get_comments_number() ) {
-                                        // Carrega a template para comentários
-                                        comments_template();
-                                    }
+                                if( comments_open() || get_comments_number() ){
+                                    comments_template();
+                                }
                                 endwhile;
                             ?>                                
                         </div>

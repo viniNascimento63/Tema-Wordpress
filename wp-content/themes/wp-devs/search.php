@@ -12,11 +12,8 @@
 
             while( have_posts() ):
                 the_post();
-                get_template_part('parts/content', 'search');
+                get_template_part( 'parts/content', 'search' );
             endwhile;
-            /* Exibe navegação por paginação de próximo/anterior
-             * para um conjunto de posts, quando aplicável.
-            */
             the_posts_pagination();
             ?>
 
