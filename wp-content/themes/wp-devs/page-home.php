@@ -1,10 +1,14 @@
 <?php get_header(); ?>
+        <!-- Conteúdo da home -->
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
+                    <!-- HERO -->
                     <section class="hero">
                         Hero
                     </section>
+
+                    <!-- SERVICES -->
                     <section class="services">
                         <h2>Services</h2>
                         <div class="container">
@@ -31,6 +35,8 @@
                             </div>
                         </div>
                     </section>
+
+                    <!-- POSTS RECENTES -->
                     <section class="home-blog">
                         <h2>Latest News</h2>
                         <div class="container">
@@ -55,6 +61,7 @@
                             <?php endif; ?>                                
                         </div>
                     </section>
+                    
                 </main>
             </div>
         </div>
