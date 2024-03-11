@@ -770,7 +770,7 @@ img {
     line-height: 2.6rem;
 }
 .home .home-blog .meta-info p{ 
-    font-weight: bold; 
+    font-weight: normal; 
     margin-bottom: 0; 
 }
 .home .home-blog .meta-info p:last-child{ 

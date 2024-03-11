@@ -1,3 +1,4 @@
+<!-- TEMPLATE p/ PÁGINAS NÃO ENCONTRADAS -->
 <?php get_header(); ?>
 <div id="content" class="site-content">
     <div id="primary" class="content-area">
@@ -12,14 +13,15 @@
                     <div class="error">
                         <p>How about doing a search?</p>
                         <?php get_search_form(); ?>
-                        <?php 
-                        the_widget( 
+                        <?php
+                        // Widget de posts recentes
+                        the_widget(
                             'WP_Widget_Recent_Posts',
                             array(
                                 'title' => 'Latest Posts',
-                                'number'    => 3
-                            ) 
-                        ); 
+                                'number' => 3 // Número de posts a mostrar
+                            )
+                        );
                         ?>
                     </div>
                 </div>
