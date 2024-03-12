@@ -1,5 +1,6 @@
 <?php
 
+// Carrega o customizer.php quando o functions.php é carregado
 require get_template_directory() . '/inc/customizer.php';
 
 // Função responsável por carregar scripts
