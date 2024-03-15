@@ -2,7 +2,7 @@
 
 function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Customize_Manager
 {
-    /* SEÇÃO DE CPOYRIGHT */
+    /* SEÇÃO DE COPYRIGHT */
     $wp_customize->add_section(
         'sect_copyright', // identificador (id) da seção 
         array(
@@ -38,7 +38,7 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Campo para customizar o título
+    // TÍTULO
     $wp_customize->add_setting(
         'sett_hero_title', // identificador (id) da setting 
         array(
@@ -48,7 +48,6 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Controle do title
     $wp_customize->add_control(
         'sett_hero_title', // referência à setting que receberá o valor do controle
         array(
@@ -59,7 +58,7 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Campo para customizar o subtítulo
+    // SUBTÍTULO
     $wp_customize->add_setting(
         'sett_hero_subtitle', // identificador (id) da setting 
         array(
@@ -69,7 +68,6 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Controle do subtítulo
     $wp_customize->add_control(
         'sett_hero_subtitle', // referência à setting que receberá o valor do controle
         array(
@@ -80,7 +78,7 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Button Text 
+    // TEXTO BOTÃO
     $wp_customize->add_setting(
         'sett_hero_button_text', // identificador (id) da setting 
         array(
@@ -90,7 +88,6 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Button text control
     $wp_customize->add_control(
         'sett_hero_button_text', // referência à setting que receberá o valor do controle
         array(
@@ -101,7 +98,7 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Button link 
+    // LINK BOTÃO
     $wp_customize->add_setting(
         'sett_hero_button_link', // identificador (id) da setting 
         array(
@@ -111,7 +108,6 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Button link control
     $wp_customize->add_control(
         'sett_hero_button_link', // referência à setting que receberá o valor do controle
         array(
@@ -122,7 +118,7 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Hero height setting
+    // ALTURA HERO
     $wp_customize->add_setting(
         'sett_hero_height', // identificador (id) da setting 
         array(
@@ -132,7 +128,6 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Hero height control
     $wp_customize->add_control(
         'sett_hero_height', // referência à setting que receberá o valor do controle
         array(
@@ -143,7 +138,7 @@ function wpdevs_customizer($wp_customize) // Parâmetro é objeto da clase WP_Cu
         )
     );
 
-    // Hero background
+    // IMAGEM HERO
     $wp_customize->add_setting(
         'sett_hero_background', // identificador (id) da setting 
         array(
