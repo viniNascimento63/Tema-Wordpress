@@ -58,14 +58,20 @@
                 <h2>Latest News</h2>
                 <div class="container">
                     <?php
+                    // Quantidade de páginas a serem exibidas
+                    $per_page = get_theme_mod('set_per_page', 3);
+                    // Recebe o(s) id(s) da(s) categoria(s) do(s) post(s) a ser(em) exibido(s) na home
+                    $category_include = get_theme_mod('set_category_include');
+                    // Recebe o(s) id(s) da(s) categoria(s) do(s) post(s) a ser(em) excluído(s) na home
+                    $category_exclude = get_theme_mod('set_category_exclude');
 
                     // Instância da clase WP_Query
                     $postlist = new WP_Query(
                         array(
                             'post_type' => 'post', // argumento padrão
-                            'posts_per_page' => 3, // quantidade de posts por consulta
-                            'category__in'  => array(14, 6, 13), //
-                            'category__not_in' => array(1)
+                            'posts_per_page' => $per_page, // quantidade de posts por consulta
+                            'category__in'  => explode(',', $category_include), //
+                            'category__not_in' => explode(',', $category_exclude)
                         )
                     );
 
