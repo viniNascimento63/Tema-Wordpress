@@ -2,16 +2,19 @@
     <header>
         <h1><?php the_title(); ?></h1>
         <div class="meta-info">
-            <p>Posted in <?php echo get_the_date(); ?> by <?php echo the_author_posts_link(); ?>.</p>
+            <!-- Data e autor -->
+            <p><?php _e('Posted in', 'wp-devs') ?> <?php echo get_the_date(); ?> <?php _e('by', 'wp-devs') ?> <?php the_author_posts_link(); ?></p>
             <?php
             // Verifica se o post tem categoria
             if (has_category()) : ?>
-                <p>Categories: <?php the_category(' '); ?></p>
+                <!-- Categoria -->
+                <p><?php _e('Categories', 'wp-devs') ?>: <?php the_category(' '); ?></p>
             <?php endif; ?>
             <?php
-            // Verifica se o post tem tag
+            // Verifica se um post tem tag
             if (has_tag()) : ?>
-                <p>Tags: <?php the_tags(' ', ', '); ?></p>
+                <!-- Tags -->
+                <p><?php _e('Tags', 'wp-devs') ?>: <?php the_tags(''); ?></p>
             <?php endif; ?>
         </div>
     </header>

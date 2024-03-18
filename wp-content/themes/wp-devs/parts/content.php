@@ -20,27 +20,18 @@
     <!-- Informações do post -->
     <div class="meta-info">
         <!-- Data e autor -->
-        <p>
-            <!-- Retorna e exibe a data que o post foi criado -->
-            Posted in <?php echo get_the_date(); ?> by
-            <!-- Exibe link p/ página do autor do post atual -->
-            <?php the_author_posts_link(); ?>.
-        </p>
-
-        <!-- Categoria -->
+        <p><?php _e('Posted in', 'wp-devs') ?> <?php echo get_the_date(); ?> <?php _e('by', 'wp-devs') ?> <?php the_author_posts_link(); ?></p>
         <?php
-        // Verifica se um post tem categoria
+        // Verifica se o post tem categoria
         if (has_category()) : ?>
-            <!-- Exibe a(s) categoria(s) de um post -->
-            <p>Categories: <?php the_category(' '); ?></p>
+            <!-- Categoria -->
+            <p><?php _e('Categories', 'wp-devs') ?>: <?php the_category(' '); ?></p>
         <?php endif; ?>
-
-        <!-- Tags -->
         <?php
         // Verifica se um post tem tag
         if (has_tag()) : ?>
-            <!-- Exibe as tags -->
-            <p><?php the_tags(); ?></p>
+            <!-- Tags -->
+            <p><?php _e('Tags', 'wp-devs') ?>: <?php the_tags(''); ?></p>
         <?php endif; ?>
 
         <!-- Exibe parte do conteúdo do post -->
