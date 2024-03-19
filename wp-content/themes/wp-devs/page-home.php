@@ -4,9 +4,9 @@
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
             <?php
-            $hero_title = get_theme_mod('sett_hero_title', 'Please, add some title here');
-            $hero_subtitle = get_theme_mod('sett_hero_subtitle', 'Please, add some subtitle here');
-            $hero_button_text = get_theme_mod('sett_hero_button_text', 'Learn more');
+            $hero_title = get_theme_mod('sett_hero_title', __('Please, add some title here', 'wp-devs'));
+            $hero_subtitle = get_theme_mod('sett_hero_subtitle', __('Please, add some subtitle here', 'wp-devs'));
+            $hero_button_text = get_theme_mod('sett_hero_button_text', __('Learn more', 'wp-devs'));
             $hero_button_link = get_theme_mod('sett_hero_button_link', '#');
             $hero_height = get_theme_mod('sett_hero_height', 800);
             $hero_background = wp_get_attachment_url(get_theme_mod('sett_hero_background'));
@@ -27,7 +27,7 @@
 
             <!-- SERVICES -->
             <section class="services">
-                <h2>Services</h2>
+                <h2><?php _e('Services', 'wpdevs') ?></h2>
                 <div class="container">
                     <div class="services-item">
                         <?php
@@ -55,7 +55,7 @@
 
             <!-- POSTS RECENTES -->
             <section class="home-blog">
-                <h2>Latest News</h2>
+                <h2><?php _e('Latest News', 'wp-devs') ?></h2>
                 <div class="container">
                     <?php
                     // Quantidade de páginas a serem exibidas
@@ -83,7 +83,7 @@
                         // Faz com que a consulta principal do WP não seja afetada
                         wp_reset_postdata();
                     else : ?>
-                        <p>Nothing yet to be displayed!</p>
+                        <p><?php _e('Nothing yet to be displayed!', 'wp-devs') ?></p>
                     <?php endif; ?>
                 </div>
             </section>

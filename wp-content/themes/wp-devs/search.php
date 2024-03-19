@@ -5,7 +5,7 @@
     <div id="main">
         <div class="container">
             <!-- Mostra o termo pesquisado -->
-            <h1>Search results for: <?php echo get_search_query(); ?></h1>
+            <h1><?php _e('Search results for', 'wp-devs') ?>: <?php echo get_search_query(); ?></h1>
 
             <?php
             // Chama a caixa de pesquisa
