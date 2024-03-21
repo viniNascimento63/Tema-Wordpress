@@ -7,7 +7,7 @@
                 // definido pelo usuário.
                 // Do contrário, um valor padrão (segundo parâmetro) 
                 // será exibido.
-                echo get_theme_mod('sett_copyright', __('Copyright X - All Rights Reserved', 'wp-devs'));
+                echo esc_html(get_theme_mod('sett_copyright', esc_html__('Copyright X - All Rights Reserved', 'wp-devs')));
                 ?>
             </p>
         </div>

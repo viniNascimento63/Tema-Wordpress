@@ -6,7 +6,7 @@ Template Name: General Template
 <?php get_header(); ?>
 
 <!-- Imagem de cabeçalho -->
-<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="imagem de cabeçalho aleatória" />
+<img src="<?php header_image(); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="imagem de cabeçalho aleatória" />
 
 <div id="content" class="site-content">
     <div id="primary" class="content-area">
@@ -24,7 +24,7 @@ Template Name: General Template
                         <?php
                         endwhile;
                     else : ?>
-                        <p><?php _e('Nothing yet to be displayed!', 'wp-devs') ?></p>
+                        <p><?php esc_html_e('Nothing yet to be displayed!', 'wp-devs') ?></p>
                     <?php endif; ?>
                 </div>
             </div>

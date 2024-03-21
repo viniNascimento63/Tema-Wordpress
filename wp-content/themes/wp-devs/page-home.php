@@ -12,14 +12,14 @@
             $hero_background = wp_get_attachment_url(get_theme_mod('sett_hero_background'));
             ?>
             <!-- HERO -->
-            <section class="hero" style="background-image: url('<?php echo $hero_background; ?>')">
+            <section class="hero" style="background-image: url('<?php echo esc_url($hero_background); ?>')">
                 <!-- Cobertura da imagem -->
-                <div class="overlay" style="min-height: <?php echo $hero_height; ?>px;">
+                <div class="overlay" style="min-height: <?php echo esc_attr($hero_height); ?>px;">
                     <div class="container">
                         <div class="hero-items">
-                            <h1><?php echo $hero_title; ?></h1>
-                            <p><?php echo nl2br($hero_subtitle); ?></p>
-                            <a href="<?php echo $hero_button_link ?>"><?php echo $hero_button_text; ?></a>
+                            <h1><?php echo esc_html($hero_title); ?></h1>
+                            <p><?php echo nl2br(esc_html(($hero_subtitle))); ?></p>
+                            <a href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text); ?></a>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
 
             <!-- SERVICES -->
             <section class="services">
-                <h2><?php _e('Services', 'wpdevs') ?></h2>
+                <h2><?php esc_html_e('Services', 'wpdevs') ?></h2>
                 <div class="container">
                     <div class="services-item">
                         <?php
@@ -55,7 +55,7 @@
 
             <!-- POSTS RECENTES -->
             <section class="home-blog">
-                <h2><?php _e('Latest News', 'wp-devs') ?></h2>
+                <h2><?php esc_html_e('Latest News', 'wp-devs') ?></h2>
                 <div class="container">
                     <?php
                     // Quantidade de páginas a serem exibidas
@@ -69,9 +69,9 @@
                     $postlist = new WP_Query(
                         array(
                             'post_type' => 'post', // argumento padrão
-                            'posts_per_page' => $per_page, // quantidade de posts por consulta
-                            'category__in'  => explode(',', $category_include), //
-                            'category__not_in' => explode(',', $category_exclude)
+                            'posts_per_page' => esc_html($per_page), // quantidade de posts por consulta
+                            'category__in'  => explode(',', esc_html($category_include)), //
+                            'category__not_in' => explode(',', esc_html($category_exclude))
                         )
                     );
 
@@ -83,7 +83,7 @@
                         // Faz com que a consulta principal do WP não seja afetada
                         wp_reset_postdata();
                     else : ?>
-                        <p><?php _e('Nothing yet to be displayed!', 'wp-devs') ?></p>
+                        <p><?php esc_html_e('Nothing yet to be displayed!', 'wp-devs') ?></p>
                     <?php endif; ?>
                 </div>
             </section>
