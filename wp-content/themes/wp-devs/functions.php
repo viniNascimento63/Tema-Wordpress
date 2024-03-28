@@ -88,12 +88,63 @@ function wpdevs_config()
 
     // Permite recuperar o título das páginas html
     add_theme_support('title-tag');
+
+    // Suporte à imagens largas e preenchendo toda largura da tela
+    add_theme_support('align-wide');
+
+    // Suporte a embeds responsivos
+    add_theme_support('responsive-embeds');
+
+    // Permite criar uma folha de estilos adicional
+    // para controlar o estilo dos conteúdos dentro
+    // do editor.
+    add_theme_support('editor-styles');
+    add_editor_style('style-editor.css');
+
+    // Permite usar estilos do esditor de blocos num tema clássico
+    add_theme_support('wp-block-styles');
+
+    // Altera a paleta de cores padrão
+    add_theme_support(
+        'editor-color-palette',
+        array(
+            'name' => esc_html__('Primary', 'wp-devs'),
+            'slug' => 'primary',
+            'color' => '#001E32',
+        ),
+        array(
+            'name' => esc_html__('Secondary', 'wp-devs'),
+            'slug' => 'secondary',
+            'color' => '#CFA707',
+        )
+    );
+
+    add_theme_support('disable-custom-colors');
 }
 
 // Adiciona wpdevs_config ao gancho
 add_action('after_setup_theme', 'wpdevs_config', 0);
 
-//
+// Registra estilos de bloco
+function wpdevs_register_block_styles()
+{
+    // Registra uma folha de estilo que só é carregada quando for chamada.
+    wp_register_style('wpdevs-block-style', get_template_directory_uri() . '/block-style.css');
+
+    register_block_style(
+        'core/quote', // tipo de bloco
+        array(
+            'name' => 'red-quote', // slug do bloco
+            'label' => 'Red Quote', // label
+            'is_default' => false, // Define se vai ser o estilo padrão
+            //'inline-style' => '.wp-block-quote.is-style-red-quote { border-left: 7px solid #ff0000; background: #f9f3f3; padding: 10px 20px; }'
+            'style_handle' => 'wpdevs-block-style'
+        )
+    );
+}
+add_action('init', 'wpdevs_register_block_styles');
+
+// Registra sidebars
 function wpdevs_sidebars()
 {
     // Área de widgets lateral
