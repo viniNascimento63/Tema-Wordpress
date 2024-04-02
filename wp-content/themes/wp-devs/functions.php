@@ -90,7 +90,7 @@ function wpdevs_config()
     add_theme_support('title-tag');
 
     // Suporte à imagens largas e preenchendo toda largura da tela
-    add_theme_support('align-wide');
+    //add_theme_support('align-wide');
 
     // Suporte a embeds responsivos
     add_theme_support('responsive-embeds');
@@ -101,25 +101,30 @@ function wpdevs_config()
     add_theme_support('editor-styles');
     add_editor_style('style-editor.css');
 
-    // Permite usar estilos do esditor de blocos num tema clássico
+    // Permite usar estilos do editor de blocos num tema clássico
     add_theme_support('wp-block-styles');
 
+    /*
     // Altera a paleta de cores padrão
     add_theme_support(
         'editor-color-palette',
         array(
-            'name' => esc_html__('Primary', 'wp-devs'),
-            'slug' => 'primary',
-            'color' => '#001E32',
-        ),
-        array(
-            'name' => esc_html__('Secondary', 'wp-devs'),
-            'slug' => 'secondary',
-            'color' => '#CFA707',
+            array(
+                'name' => esc_html__('Primary', 'wp-devs'),
+                'slug' => 'primary',
+                'color' => '#001E32',
+            ),
+            array(
+                'name' => esc_html__('Secondary', 'wp-devs'),
+                'slug' => 'secondary',
+                'color' => '#CFA707',
+            )
         )
     );
 
+    // Desabilita cores customizadas
     add_theme_support('disable-custom-colors');
+    */
 }
 
 // Adiciona wpdevs_config ao gancho
