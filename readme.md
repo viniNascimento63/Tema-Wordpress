@@ -19,8 +19,12 @@
 
 <div>
 	<h2>Imagens do projeto pronto:</h2>
-	<img src=""/>
-	<img src=""/>
-	<img src=""/>
-	<img src=""/>
+	<p>HOME</p>
+	<img src="wp-content/themes/wp-devs/imagens-projeto-pronto/home.png"/>
+	<p>HOME FOOTER</p>
+	<img src="wp-content/themes/wp-devs/imagens-projeto-pronto/home-footer.png"/>
+	<p>BLOG</p>
+	<img src="wp-content/themes/wp-devs/imagens-projeto-pronto/blog.png"/>
+	<p>ABOUT</p>
+	<img src="wp-content/themes/wp-devs/imagens-projeto-pronto/about.png"/>
 </div>
